@@ -10,6 +10,7 @@ require (
 	github.com/golang/protobuf v1.4.0
 	github.com/marten-seemann/qpack v0.1.0
 	github.com/marten-seemann/qtls v0.10.0
+	github.com/marten-seemann/qtls-go115 v0.0.0-20200813042125-f94d2ad9bd86
 	github.com/onsi/ginkgo v1.11.0
 	github.com/onsi/gomega v1.8.1
 	go.opencensus.io v0.22.2

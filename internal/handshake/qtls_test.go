@@ -81,7 +81,9 @@ var _ = Describe("qtls.Config", func() {
 		tlsConf := &tls.Config{}
 		qtlsConf1 := tlsConfigToQtlsConfig(tlsConf, nil, &mockExtensionHandler{}, utils.NewRTTStats(), nil, nil, nil, nil, false)
 		qtlsConf2 := tlsConfigToQtlsConfig(tlsConf, nil, &mockExtensionHandler{}, utils.NewRTTStats(), nil, nil, nil, nil, false)
+		//nolint:staticcheck
 		Expect(qtlsConf1.SessionTicketKey).ToNot(BeZero()) // should now contain a random value
+		//nolint:staticcheck
 		Expect(qtlsConf1.SessionTicketKey).To(Equal(qtlsConf2.SessionTicketKey))
 	})
 

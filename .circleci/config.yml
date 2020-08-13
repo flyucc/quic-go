@@ -5,6 +5,12 @@ executors:
       - image: "circleci/golang:1.14"
     environment:
       runrace: true
+  test-go115:
+    docker:
+      - image: "circleci/golang:1.15"
+    environment:
+      runrace: true
+      GODEBUG: x509ignoreCN=0
   interop:
     docker:
       - image: circleci/buildpack-deps:stretch
@@ -45,6 +51,9 @@ jobs:
           command: ginkgo -v -randomizeAllSpecs -trace integrationtests/self -- -qlog -metrics
   go114:
     <<: *test
+  go115:
+    <<: *test
+    executor: test-go115
   interop-build:
     executor: interop
     steps:
@@ -80,6 +89,7 @@ workflows:
   workflow:
     jobs:
       - go114
+      - go115
       - interop-build:
           filters:
             branches:
