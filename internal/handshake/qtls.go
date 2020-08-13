@@ -6,9 +6,8 @@ import (
 	"time"
 	"unsafe"
 
+	"github.com/lucas-clemente/quic-go/internal/qtls"
 	"github.com/lucas-clemente/quic-go/internal/utils"
-
-	"github.com/marten-seemann/qtls"
 )
 
 func init() {
@@ -61,12 +60,12 @@ func tlsConfigToQtlsConfig(
 	c = c.Clone()
 	// QUIC requires TLS 1.3 or newer
 	minVersion := c.MinVersion
-	if minVersion < qtls.VersionTLS13 {
-		minVersion = qtls.VersionTLS13
+	if minVersion < tls.VersionTLS13 {
+		minVersion = tls.VersionTLS13
 	}
 	maxVersion := c.MaxVersion
-	if maxVersion < qtls.VersionTLS13 {
-		maxVersion = qtls.VersionTLS13
+	if maxVersion < tls.VersionTLS13 {
+		maxVersion = tls.VersionTLS13
 	}
 	var getConfigForClient func(ch *qtls.ClientHelloInfo) (*qtls.Config, error)
 	if c.GetConfigForClient != nil {

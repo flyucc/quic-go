@@ -13,10 +13,10 @@ import (
 
 	"github.com/lucas-clemente/quic-go/internal/protocol"
 	"github.com/lucas-clemente/quic-go/internal/qerr"
+	"github.com/lucas-clemente/quic-go/internal/qtls"
 	"github.com/lucas-clemente/quic-go/internal/testdata"
 	"github.com/lucas-clemente/quic-go/internal/utils"
 	"github.com/lucas-clemente/quic-go/internal/wire"
-	"github.com/marten-seemann/qtls"
 
 	"github.com/golang/mock/gomock"
 
@@ -420,7 +420,7 @@ var _ = Describe("Crypto Setup TLS", func() {
 
 		It("handshakes with client auth", func() {
 			clientConf.Certificates = []tls.Certificate{generateCert()}
-			serverConf.ClientAuth = qtls.RequireAnyClientCert
+			serverConf.ClientAuth = tls.RequireAnyClientCert
 			_, _, clientErr, _, serverErr := handshakeWithTLSConf(
 				clientConf, serverConf,
 				&utils.RTTStats{}, &utils.RTTStats{},

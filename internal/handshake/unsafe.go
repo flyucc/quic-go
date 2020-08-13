@@ -12,7 +12,7 @@ import (
 	"crypto/tls"
 	"reflect"
 
-	"github.com/marten-seemann/qtls"
+	"github.com/lucas-clemente/quic-go/internal/qtls"
 )
 
 func init() {

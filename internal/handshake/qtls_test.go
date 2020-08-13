@@ -6,9 +6,9 @@ import (
 	"net"
 	"unsafe"
 
+	"github.com/lucas-clemente/quic-go/internal/qtls"
 	"github.com/lucas-clemente/quic-go/internal/utils"
 
-	"github.com/marten-seemann/qtls"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )
@@ -197,9 +197,9 @@ var _ = Describe("qtls.Config generation", func() {
 		chi := &qtlsClientHelloInfo{
 			CipherSuites:      []uint16{1, 2, 3},
 			ServerName:        "foo.bar",
-			SupportedCurves:   []qtls.CurveID{4, 5, 6},
+			SupportedCurves:   []tls.CurveID{4, 5, 6},
 			SupportedPoints:   []uint8{7, 8, 9},
-			SignatureSchemes:  []qtls.SignatureScheme{10, 11, 12},
+			SignatureSchemes:  []tls.SignatureScheme{10, 11, 12},
 			SupportedProtos:   []string{"foo", "bar"},
 			SupportedVersions: []uint16{13, 14, 15},
 			Conn:              &net.UDPConn{},
@@ -207,7 +207,7 @@ var _ = Describe("qtls.Config generation", func() {
 				MinVersion:       tls.VersionTLS10,
 				MaxVersion:       tls.VersionTLS12,
 				CipherSuites:     []uint16{16, 17, 18},
-				CurvePreferences: []qtls.CurveID{19, 20, 21},
+				CurvePreferences: []tls.CurveID{19, 20, 21},
 			},
 		}
 		tlsCHI := toTLSClientHelloInfo((*qtls.ClientHelloInfo)(unsafe.Pointer(chi)))
