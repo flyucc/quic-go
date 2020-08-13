@@ -10,6 +10,8 @@ require (
 	github.com/golang/protobuf v1.4.0
 	github.com/marten-seemann/qpack v0.1.0
 	github.com/marten-seemann/qtls v0.10.0
+	github.com/marten-seemann/testlib v0.4.0
+	github.com/marten-seemann/testlib/030 v0.0.0-00010101000000-000000000000
 	github.com/onsi/ginkgo v1.11.0
 	github.com/onsi/gomega v1.8.1
 	go.opencensus.io v0.22.2
@@ -19,3 +21,7 @@ require (
 	google.golang.org/protobuf v1.23.0
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 )
+
+replace github.com/marten-seemann/testlib/030 => github.com/marten-seemann/testlib v0.3.0
+
+replace github.com/marten-seemann/testlib/040 => github.com/marten-seemann/testlib v0.4.0

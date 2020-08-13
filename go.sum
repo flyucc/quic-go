@@ -81,6 +81,12 @@ github.com/marten-seemann/qpack v0.1.0 h1:/0M7lkda/6mus9B8u34Asqm8ZhHAAt9Ho0vniN
 github.com/marten-seemann/qpack v0.1.0/go.mod h1:LFt1NU/Ptjip0C2CPkhimBz5CGE3WGDAUWqna+CNTrI=
 github.com/marten-seemann/qtls v0.10.0 h1:ECsuYUKalRL240rRD4Ri33ISb7kAQ3qGDlrrl55b2pc=
 github.com/marten-seemann/qtls v0.10.0/go.mod h1:UvMd1oaYDACI99/oZUYLzMCkBXQVT0aGm99sJhbT8hs=
+github.com/marten-seemann/testlib v0.2.0 h1:fdj3tScss7ycbTVBQlcetajj8+ndEq+dj6qGlvG+73g=
+github.com/marten-seemann/testlib v0.2.0/go.mod h1:MW56ZHCnc+eyZ09R6ir6AoycsLxh4qcM4ndIAr6C2Tw=
+github.com/marten-seemann/testlib v0.3.0 h1:5vv3Z+K6VnFwsRD9rjU1G9XeNrr9og8JVRtL/I99+HA=
+github.com/marten-seemann/testlib v0.3.0/go.mod h1:MW56ZHCnc+eyZ09R6ir6AoycsLxh4qcM4ndIAr6C2Tw=
+github.com/marten-seemann/testlib v0.4.0 h1:DNVtR5C4gPKLSsrplx2yKKnHMgUB0fboiOu8PazqaII=
+github.com/marten-seemann/testlib v0.4.0/go.mod h1:MW56ZHCnc+eyZ09R6ir6AoycsLxh4qcM4ndIAr6C2Tw=
 github.com/matttproud/golang_protobuf_extensions v1.0.1 h1:4hp9jkHxhMHkqkrB3Ix0jegS5sx/RkqARlsWZ6pIwiU=
 github.com/matttproud/golang_protobuf_extensions v1.0.1/go.mod h1:D8He9yQNgCq6Z5Ld7szi9bcBfOoFv/3dc6xSMkL2PC0=
 github.com/microcosm-cc/bluemonday v1.0.1/go.mod h1:hsXNsILzKxV+sX77C5b8FSuKF00vh2OMYv+xgHpAMF4=
